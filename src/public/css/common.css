@@ -1,0 +1,16 @@
+/* 共通ヘッダー用BEM記法スタイル */
+.header {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    padding: 0.5rem 0;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-left: 2rem;
+    letter-spacing: 0.1em;
+    font-family: 'Nunito', sans-serif;
+}
