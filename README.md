@@ -86,3 +86,5 @@ sudo chmod -R 775 src
 ・nginx 1.21.1
 
 ## ER図
+
+![ER図](./images/mogitate-products.jpg)
