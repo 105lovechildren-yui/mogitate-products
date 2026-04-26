@@ -48,6 +48,13 @@ docker-compose exec php php artisan migrate
 docker-compose exec php php artisan db:seed
 ```
 
+6.ストレージの公開設定
+商品画像を表示させるために、以下のコマンドでシンボリックリンクを作成してください。
+
+```bash
+docker-compose exec php php artisan storage:link
+```
+
 ## 権限エラーが発生した場合
 
 開発環境によっては、ファイルの所有者が異なり Permission denied エラーが発生する場合があります。
