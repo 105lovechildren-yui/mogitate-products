@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Product;
 
 class ProductsTableSeeder extends Seeder
 {
@@ -109,26 +109,15 @@ class ProductsTableSeeder extends Seeder
 
         foreach ($products as $item) {
             //商品テーブルに商品を登録(ID取得のため)
-            $productId = DB::table('products')->insertGetId([
+            $product = Product::create([
                 'name' => $item['name'],
                 'price' => $item['price'],
                 'image' => $item['image'],
                 'description' => $item['description'],
-                'created_at' => now(),
-                'updated_at' => now(),
             ]);
 
             //商品と季節の紐付け
-            $seasonData = [];
-            foreach ($item['seasons'] as $seasonId) {
-                $seasonData[] = [
-                    'product_id' => $productId,
-                    'season_id' => $seasonId,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            }
-            DB::table('product_season')->insert($seasonData);
+            $product->seasons()->attach($item['seasons']);
         }
     }
 }
