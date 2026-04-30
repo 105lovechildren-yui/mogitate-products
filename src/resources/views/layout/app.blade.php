@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="stylesheet" href="/css/sanitize.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <title>@yield('title', config('app.name', 'Laravel'))</title>
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    @yield('css')
 </head>
 
 <body>
     <header class="header">
-        <div class="header__logo">mogitate</div>
+        <a href="{{ route('products.index') }}" class="header__logo" style="text-decoration:none;">
+            mogitate
+        </a>
     </header>
     <div id="app">
         <main class="main">
@@ -19,7 +22,7 @@
         </main>
     </div>
 
-    
+
 </body>
 
 </html>

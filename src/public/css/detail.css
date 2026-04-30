@@ -1,0 +1,156 @@
+.detail__file-button {
+    display: inline-block;
+    background: #e0e0e0;
+    color: #222;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 8px;
+}
+.detail__file-button:hover {
+    background: #ffa929;
+    color: #111;
+}
+.main {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.detail__desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.detail__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.detail__button--secondary {
+    background: #e0e0e0;
+    color: #222;
+}
+.detail__button--secondary:hover {
+    background: #cccccc;
+}
+.detail__button--primary {
+    background: #ffa929;
+    color: #111;
+}
+.detail__button--primary:hover {
+    background: #ffb84d;
+}
+.detail__button--danger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e74c3c;
+    padding: 4px;
+}
+
+.detail__button--danger:hover {
+    color: #c0392b;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.detail__button--danger svg {
+    width: 20px;
+    height: 20px;
+    fill: #e53935;
+    margin-right: 0;
+}
+.detail__button-group--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+.detail__button-group--right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.detail__button-row {
+    margin: 0 auto 32px auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-area {
+    margin: 0 auto 24px auto;
+    max-width: 900px;
+}
+.detail-wrapper {
+    margin: 0 auto auto;
+    max-width: 900px;
+}
+.detail__desc-wrapper {
+    margin: 0 auto auto;
+    max-width: 900px;
+}
+/* タイトルエリア・詳細エリア・説明欄の背景色 */
+.title-area {
+    background-color: #f8f8f8;
+}
+.detail-wrapper {
+    background-color: #f8f8f8;
+}
+.detail__desc-wrapper {
+    background-color: #f8f8f8;
+}
+/* detail.css */
+
+.detail-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.detail__image-wrapper {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detail__image {
+    width: 100%;
+    max-width: 480px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.detail__form-wrapper {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .detail-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .detail__image-wrapper, .detail__form-wrapper {
+        max-width: 100%;
+    }
+}

@@ -11,7 +11,7 @@
 @section('content')
 <div class="title-area">
     <div class="title-area__title">商品一覧</div>
-    <a href="#" class="title-area__button">商品を追加</a>
+    <a href="{{ route('products.register') }}" class="title-area__button">＋商品を追加</a>
 </div>
 <div class="content-wrapper">
     <aside class="sidebar">
@@ -39,6 +39,7 @@
         @endif
         <div class="main__grid">
             @foreach($products as $product)
+            <a href="/products/detail/{{ $product->id }}" class="main__item-link">
             <div class="main__item">
                 <img src="{{ asset('storage/fruits-img/' . $product->image) }}" alt="{{ $product->name }}" class="main__item-image">
                 <div class="main__item-details">
@@ -46,12 +47,12 @@
                     <div class="main__item-price">￥{{ number_format($product->price) }}</div>
                 </div>
             </div>
+            </a>
             @endforeach
         </div>
         <div class="pagination-wrapper">
             {{ $products->links() }}
         </div>
     </main>
-    
 </div>
 @endsection
