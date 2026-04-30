@@ -74,7 +74,8 @@ sudo chmod -R 775 src
 
 ## 開発環境
 
-・商品一覧ページ:http://localhost
+・商品一覧ページ:http://localhost/products
+・商品登録ページ:http://localhost/products/register
 ・phpMyAdmin:http://localhost:8080/
 
 ## 使用技術（実行環境）
