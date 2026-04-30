@@ -79,34 +79,34 @@
             <a href="{{ route('products.index') }}" class="detail__button detail__button--secondary">戻る</a>
             <button type="submit" class="detail__button detail__button--primary">変更を保存</button>
         </div>
-        <div class="detail__button-group detail__button-group--right">
-            <form method="POST" action="{{ route('products.destroy', ['productId' => $product->id]) }}" style="display:inline;">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                    onclick="return confirm('本当に削除しますか？');"
-                    class="detail__button detail__button--danger"
-                    title="削除">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="3 6 5 6 21 6"></polyline>
-                        <path d="M19 6l-2 14H7L5 6"></path>
-                        <path d="M10 11v6"></path>
-                        <path d="M14 11v6"></path>
-                        <path d="M9 6V4h6v2"></path>
-                    </svg>
-                </button>
-            </form>
-        </div>
+
     </div>
 </form>
-
+<div class="detail__button-group detail__button-group--right">
+    <form method="POST" action="{{ route('products.destroy', ['productId' => $product->id]) }}" style="display:inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit"
+            onclick="return confirm('本当に削除しますか？');"
+            class="detail__button detail__button--danger"
+            title="削除">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6l-2 14H7L5 6"></path>
+                <path d="M10 11v6"></path>
+                <path d="M14 11v6"></path>
+                <path d="M9 6V4h6v2"></path>
+            </svg>
+        </button>
+    </form>
+</div>
 
 @endsection
